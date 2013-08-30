@@ -1,14 +1,11 @@
 /*Juego de la vida Conway */
 
-
-
 #include <stdio.h>//libreria basica de entrada salida
 #include <time.h>//libreria para generar srand
 #include <stdlib.h> //libreria para borrar 
 #define x 10   //el numero de filas declarado en una constante
 #define y 10    //el numero de columnas declarado en una constante
 char tabla[x][y],tablanueva[x][y]; //En una tabla se mostrará, en la otra se aplicarán los cambios 
-
 
 void pantalla(void)
 {
@@ -58,8 +55,6 @@ for (j=0;j<y;j++)
                      if(tabla[i+1][j-1]==1)v++;
                      if(tabla[i+1][j]==1)v++;
                      if(tabla[i+1][j+1]==1)v++;
-                     
-
 
 // definos la regla de conway condicional para determinar si la casilla vive o muere
 if (tabla[i][j]==1)//si esta vivo al inicio
@@ -93,13 +88,9 @@ tablanueva[i][j]=1;
      }
  }
   } //fin j
-
 }// fin i
 
-
 }
-
-
               
 void imprimirtablero (void){
      int i,j;
